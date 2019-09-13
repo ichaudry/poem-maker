@@ -1,25 +1,27 @@
-# MEVN-boilerplate
-A fullstack boilerplate with Mongo, ExpressJS, VueJS and NodeJS.
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOiKh1Xk5RDZFKPkVXYfi8U-t2cuotiAOR7G_7w_HWXfV02TMnd9wnVM" height="50" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" height="50" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/docs/Vue.js_Logo.svg.png" height="50" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg" height="50" /> 
-
-A skeleton generated with MEVN stack technologies which can be used as a boilerplate for anyone who is starting out. It contains a client template(**VueJS**) and a server template(**NodeJS**, **ExpressJS**) and a connection between them via an API layer.
-
+# Poem Maker
+A fullstack Web Application with Mongo, ExpressJS, VueJS and NodeJS.
 
 ## Setup Development Machine
+
+(Node.js command-line toools are needed to run the application)
+
 1. Clone the repo `git clone git@github.com:anaida07/MEVN-boilerplate.git`
 
-2. `cd MEVN-boilerplate`
+2. Use commandline to open the cloned repository `cd MEVN-boilerplate`
 
-3. Open client
+4. Start MongoDb on your machine by running the 'mongo' command from the commmandline. You will need MongoDb installed to succesfully run this application.
+
+3. Open client directory, install dependencies, and run development
 ```
 cd client
+npm install --save
 npm run dev
 ```
 
-4. Open server
+4. Open server directory, install dependencies, and start the server
 ```
 cd server
+npm install --save
 npm start
 ```
 
