@@ -18,7 +18,13 @@ var PostSchema = new Schema({
   verb_2: String,
   verb_3: String,
   timeStamp: String,
-  poem: String
+  poem: {
+    line1: String,
+    line2: String,
+    line3:String,
+    line4:String,
+    line5:String
+  }
 });
 
 var Post = mongoose.model("Post", PostSchema);

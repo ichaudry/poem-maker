@@ -1,0 +1,15 @@
+            globalInput.set('noun_1', input.noun_1);
+			globalInput.set('noun_2', input.noun_2);
+			globalInput.set('noun_3', input.noun_3);
+			globalInput.set('adjective_1', input.adjective_1);
+			globalInput.set('adjective_2', input.adjective_2);
+			globalInput.set('adjective_3', input.adjective_3);
+			globalInput.set('adverb_1', input.adverb_1);
+			globalInput.set('adverb_2', input.adverb_2);
+			globalInput.set('adverb_3', input.adverb_3);
+			globalInput.set('preposition_1', input.preposition_1);
+			globalInput.set('preposition_2', input.preposition_2);
+			globalInput.set('preposition_3', input.preposition_3);
+			globalInput.set('verb_1', input.verb_1);
+			globalInput.set('verb_2', input.verb_2);
+			globalInput.set('verb_3', input.verb_3);

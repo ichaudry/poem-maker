@@ -3,6 +3,26 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 
+var inputMap=new Object({
+	noun_1:'n1',
+	noun_2: 'n2',
+	noun_3:'n3',
+	adjective_1: 'adje1',
+	adjective_2: 'adje2' ,
+	adjective_3: 'adje3',
+	adverb_1: 'adv1',
+	adverb_2: 'adv2',
+	adverb_3: 'adv3',
+	preposition_1: 'prep1',
+	preposition_2: 'prep2',
+	preposition_3: 'prep3',
+	verb_1: 'v1',
+	verb_2: 'v2',
+	verb_3: 'v3'
+})
+
+
+
 const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
@@ -13,6 +33,7 @@ var db = mongodb_conn_module.connect();
 
 var Post = require("../models/post");
 var poemGenerator=require('../src/poemGenerator')
+poemGenerator.createPoem(inputMap)
 
 
 app.get('/posts', (req, res) => {
@@ -60,10 +81,10 @@ app.post('/add_post', (req, res) => {
 		preposition_3: preposition_3,
 		verb_1: verb_1,
 		verb_2: verb_2,
-		verb_3: verb_3,
-		timeStamp: timeStamp,
-		poem: poem
+		verb_3: verb_3
 	})
+
+	poem=poemGenerator.createPoem(inputMap)
 	
 	var new_post = new Post({
 		noun_1: noun_1,
@@ -82,8 +103,14 @@ app.post('/add_post', (req, res) => {
 		verb_2: verb_2,
 		verb_3: verb_3,
 		timeStamp: timeStamp,
-		poem: poemGenerator.createPoem(inputMap)
-	})
+		poem:{
+			line1: poem.get(0),
+			line2: poem.get(1),
+			line3: poem.get(2),
+			line4: poem.get(3),
+			line5: poem.get(4)
+	}
+})
 
 	new_post.save(function (error) {
 		if (error) {

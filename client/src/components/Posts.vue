@@ -9,9 +9,8 @@
           <td width="550">Poems</td>
         </tr>
         <tr v-for="post in posts">
-          <td>{{ post.timeStamp }}</td>
-          <td>{{ post.poem }}</td>
-          <td align="center"></td>
+          <td align="center">{{ post.timeStamp }}</td>
+          <td align="center"><p>{{ post.poem.line1}} <br> {{post.poem.line2 }} <br> {{post.poem.line3 }} <br> {{post.poem.line4 }}<br> {{post.poem.line5 }}</p></td>
         </tr>
       </table>
     </div>
