@@ -1,23 +1,25 @@
 <template>
+
   <div class="posts">
-    <router-link v-bind:to="{ name: 'addpost' }" class="add_post_link">Create a poem</router-link>
-    <h1>Posts</h1>
-    <div v-if="posts.length > 0" class="table-wrap">
-      <table>
-        <tr>
-          <td>Date</td>
-          <td width="550">Poems</td>
-        </tr>
-        <tr v-for="post in posts">
-          <td align="center">{{ post.timeStamp }}</td>
-          <td align="center"><p>{{ post.poem.line1}} <br> {{post.poem.line2 }} <br> {{post.poem.line3 }} <br> {{post.poem.line4 }}<br> {{post.poem.line5 }}</p></td>
-        </tr>
-      </table>
-    </div>
+    <br>
+    <v-container class="table-wrap">
+    <h1 class="display-2">Posts</h1>
+    <v-divider></v-divider>
+    <br>
+    
+    <div v-if="posts.length > 0" >
+        <div v-for="post in posts">
+          <p>{{ post.poem.line1}} <br> {{post.poem.line2 }} <br> {{post.poem.line3 }} <br> {{post.poem.line4 }}<br> {{post.poem.line5 }} </p>
+          <p class="overline"> {{ post.timeStamp }} </p>
+          <br>
+          <hr >
+         </div>
+         </div>
     <div v-else>
       No Posts Yet. Make a new Submission? <br /><br />
-      <router-link v-bind:to="{ name: 'addpost' }" class="add_post_link">Create a poem</router-link>
+      <v-btn :to="{name: 'Home'}"  class="">Create a poem</v-btn>
     </div>
+    </v-container>
   </div>
 </template>
 

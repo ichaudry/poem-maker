@@ -19,5 +19,24 @@ export default {
 
   deletePost (id) {
     return Api().delete('posts/' + id)
+  },
+  createTimeStamp () {
+    var newDate = new Date()
+    var month = newDate.getMonth()
+    var date = newDate.getDate()
+    var year = newDate.getFullYear()
+    var hours = newDate.getHours()
+    var amOrPm = 'am'
+    if (hours > 12) {
+      hours = hours - 12
+      amOrPm = 'pm'
+    }
+    var minutes = newDate.getMinutes()
+    if (minutes < 10) {
+      minutes = '0' + minutes
+    }
+    var calDate = month + '-' + date + '-' + year
+    var time = hours + ':' + minutes + ' ' + amOrPm
+    return calDate + '  ' + time
   }
 }
