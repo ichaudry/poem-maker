@@ -15,7 +15,7 @@ A fullstack Web Application with Mongo, ExpressJS, VueJS and NodeJS.
 ```
 cd client
 npm install --save
-npm run dev
+npm run serve
 ```
 
 4. Open server directory, install dependencies, and start the server
