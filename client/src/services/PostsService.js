@@ -1,4 +1,8 @@
+/**
+ * Set up API calls to be used on client-side
+ */
 import Api from '@/services/Api'
+
 
 export default {
   getPosts () {
@@ -20,6 +24,8 @@ export default {
   deletePost (id) {
     return Api().delete('posts/' + id)
   },
+
+  //Create a custom time stamp
   createTimeStamp () {
     var newDate = new Date()
     var month = newDate.getMonth()

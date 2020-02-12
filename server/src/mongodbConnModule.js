@@ -1,3 +1,6 @@
+/**
+ * Database connection
+ */
 var mongoose = require('mongoose');
 
 module.exports.connect = function() {

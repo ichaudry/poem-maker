@@ -1,3 +1,7 @@
+/**
+ *Poem generation algorithm 
+ */
+
 const fetch = require("node-fetch");
 
 module.exports={
@@ -110,23 +114,3 @@ function setVar(input){
 }
 return pg
 }
-
-// var url='https://api.datamuse.com/words?rel_rhy=string'
-
-
-
-// async function getData(url) {
-//     const response = await fetch(url);
-
-//     return response.json()
-// }
-
-// async function main() {
-//     const data = await getData(url);
-
-//     console.log(data[1].word)
-
-//     return data[1].word
-// }
-
-

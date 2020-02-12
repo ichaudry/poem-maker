@@ -27,6 +27,10 @@ app.get('/posts', (req, res) => {
 	}).sort({_id:-1})
 })
 
+
+/**
+ * Routes for create, read, update and delete operations
+ */
 app.post('/add_post', (req, res) => {
 	var db = req.db;
 
@@ -47,9 +51,6 @@ app.post('/add_post', (req, res) => {
   	var verb_3 = handleEmptyString(req.body.verb_3,'stands');
 	var timeStamp=req.body.timeStamp;
 	
-	// noun_1=handleEmptyString(noun_1,'police')
-	
-	
 	var inputMap=new Object({
 		n1: noun_1,
 		n2: noun_2,
@@ -67,9 +68,6 @@ app.post('/add_post', (req, res) => {
 		v2: verb_2,
 		v3: verb_3
 	})
-	
-	
-
 
 	var poem=poemGenerator.createPoem(inputMap)
 
@@ -159,6 +157,3 @@ function handleEmptyString(str,rep){
 }
 
 app.listen(process.env.PORT || 8081)
-
-
-

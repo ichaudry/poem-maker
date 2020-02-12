@@ -1,3 +1,7 @@
+/**
+ * Connects client to server api using axios
+ * 
+ */
 import axios from 'axios'
 
 export default () => {

@@ -1,3 +1,6 @@
+/**
+ * Model for the database schema.
+ */
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 

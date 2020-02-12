@@ -39,27 +39,12 @@ export default {
     async getPosts () {
       const response = await PostsService.getPosts()
       this.posts = response.data.posts
-    },
-    async deletePost (id) {
-      const $this = this
-      $this.$swal({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then(function () {
-        PostsService.deletePost(id)
-        $this.$router.go({
-          path: '/'
-        })
-      })
     }
   }
 }
 </script>
+
+
 <style type="text/css">
 .table-wrap {
   width: 60%;

@@ -81,7 +81,7 @@ export default {
   data () {
     
     return {
-      
+      //Input validation 
       inputRules: [
         v => !!v >0 || 'Input Required',
         v => /^[A-Za-z]+$/.test(v) || 'English Alphabets only!'
@@ -104,6 +104,8 @@ export default {
       timeStamp: '',
     }
   },
+
+  //Calls the addPost method to send inputted data to the server 
   methods: {
     async addPost () {
       if(this.$refs.form.validate()){
